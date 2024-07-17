@@ -5,7 +5,8 @@ const TodoData = (props) => {
     //    age: 25,
     //    data: {}
     //}
-    const {name, age, data} = props;
+    // eslint-disable-next-line react/prop-types, no-unused-vars
+    const { name, age, data } = props;
     // const name = props.name;
     // const age = props.age;
     // const data = props.data; 
