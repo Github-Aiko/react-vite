@@ -26,7 +26,8 @@ const App = () => {
   }
 
   const deleteTodo = (id) => {
-    console.log(">>> check id: ", id)
+    const newTodo = todoList.filter(item => item.id !== id)
+    setTodoList(newTodo);
   }
 
   //{key: value}
@@ -40,6 +41,7 @@ const App = () => {
         {todoList.length > 0 ?
           <TodoData
             todoList={todoList}
+            deleteTodo={deleteTodo}
           />
           :
           <div className='todo-image'>

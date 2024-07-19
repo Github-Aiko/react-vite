@@ -1,18 +1,16 @@
 const TodoData = (props) => {
 
+  const { todoList, deleteTodo } = props;
+
   const handleClick = (id) => {
-    alert(id)
+    deleteTodo(id)
   }
   //props là 1 object
   //{
   //    name: "Eric",
   //    age: 25,
   //    data: {}
-  //}
-  // eslint-disable-next-line react/prop-types, no-unused-vars
-  const { todoList } = props;
-
-  console.log(">>> check props: ", todoList)
+  //}  // eslint-disable-next-line react/prop-types, no-unused-vars
   // const name = props.name;
   // const age = props.age;
   // const data = props.data; 
