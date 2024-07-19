@@ -3,6 +3,9 @@ import TodoNew from './components/todo/todoNew';
 import reactLogo from './assets/react.svg';
 import { useState } from 'react';
 import './components/todo/todo.css';
+import Header from './components/layout/header';
+import Footer from './components/layout/footer';
+import { Outlet } from 'react-router-dom';
 
 const App = () => {
 
@@ -33,6 +36,7 @@ const App = () => {
   //{key: value}
   return (
     <>
+      <Header />
       <div className="todo-container">
         <div className="todo-title">Todo List</div>
         <TodoNew
@@ -49,6 +53,8 @@ const App = () => {
           </div>
         }
       </div>
+      <Outlet />
+      <Footer />
     </>
   );
 };
