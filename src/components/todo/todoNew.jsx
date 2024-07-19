@@ -4,14 +4,15 @@ const TodoNew = (props) => {
 
     //useState hook
     // const valueInput = "eric"
-    const [valueInput, setValueInput] = useState("eric")
+    const [valueInput, setValueInput] = useState("")
 
     const { addNewTodo } = props;
 
     // addNewTodo("Eric");
 
     const handleClick = () => {
-        console.log(">>> check valueInput: ", valueInput)
+        addNewTodo(valueInput);
+        setValueInput("")
     }
     const handleOnChange = (name) => {
         setValueInput(name);
